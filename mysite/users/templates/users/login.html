@@ -1,0 +1,27 @@
+{% extends "main/base.html" %}
+{% load bootstrap3 %}
+
+
+{% block header %}
+  <p>--</p>
+  <h1>登录</h1>
+{% endblock header %}
+
+{% block content %}
+
+  {% if form.errors %}
+  <font color="#FF0000">你的用户名和密码不匹配.</font>
+  {% endif %}
+  
+  <form method="post" action="{% url 'users:login' %}" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form%}
+    
+    {% buttons %}
+      <button name="submit" class="btn btn-primary">登录</button>
+    {% endbuttons %}
+    
+    <input type="hidden" name="next" value="{% url 'main:index' %}" />
+  </form>
+  
+{% endblock content %}

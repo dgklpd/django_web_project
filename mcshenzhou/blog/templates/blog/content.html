@@ -1,0 +1,15 @@
+{% extends "mcshenzhous/base.html" %}
+{% block content %}
+<div>
+	<h1>{{ article.title }}</h1>
+</div>
+<hr>
+<div class="row">
+	<div class="col-xs-12 col-md-8">
+		<p>作者：<span>{{ article.author.username }}</span></p>
+		<p>发布于：<span>{{ publish }}1</span></p>
+		<p>更新内容：</p>
+		<div>{{ article.body }}</div>
+	</div>
+</div>
+{% endblock content %}

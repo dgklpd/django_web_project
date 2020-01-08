@@ -1,0 +1,56 @@
+{% load bootstrap3 %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta charset="zh-cn">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>吹响集结号</title>
+      <link rel="shortcut icon" href="/static/favicon.ico" />
+ 
+	  {% bootstrap_css %}
+	  {% bootstrap_javascript %}
+      
+  </head>
+  <body>
+    <link rel="shortcut icon" href="static/favicon.ico" />
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+      
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+               data-toggle="collapse" data-target="#navbar"
+               aria-expanded="false" aria-controls="navbar">
+          </button>
+          <a class="navbar-brand" href="{% url 'video:index' %}">
+              首页</a>
+        </div>
+        
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            </li>
+            <li><a href="https://111.231.195.21:8000">返回引导页面</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+          
+      </div>
+
+    </nav>
+    
+    <div class="container">
+    
+      <div class="page-header">
+        {% block header %}{% endblock header %}
+      </div>
+      <div>
+        {% block content %}{% endblock content %}
+      </div> 
+      
+    </div> <!-- /container -->
+  </body>
+</html>
+    
+          
+          

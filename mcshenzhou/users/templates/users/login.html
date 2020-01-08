@@ -1,0 +1,26 @@
+{% extends "mcshenzhous/base.html" %}
+{% load bootstrap3 %}
+
+
+{% block header %}
+  <p>-</p>
+  <h1>登录</h1>
+  <p>仅限内部人员可进行登录</p>
+{% endblock header %}
+
+{% block content %}
+
+  
+  
+  <form method="post" action="{% url 'users:login' %}" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form%}
+    
+    {% buttons %}
+      <button name="submit" class="btn btn-primary">登录</button>
+    {% endbuttons %}
+    
+    <input type="hidden" name="next" value="{% url 'mcshenzhous:index' %}" />
+  </form>
+  
+{% endblock content %}

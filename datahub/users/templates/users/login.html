@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+{% load bootstrap3 %}
+
+
+{% block header %}
+  <p>-</p>
+  <h1>管理员登录入口</h1>
+{% endblock header %}
+
+{% block content %}
+
+  
+  
+  <form method="post" action="{% url 'users:login' %}" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form%}
+    
+    {% buttons %}
+      <button name="submit" class="btn btn-primary">登录</button>
+    {% endbuttons %}
+    
+    <input type="hidden" name="next" value="{% url 'main_site:index' %}" />
+  </form>
+  
+{% endblock content %}

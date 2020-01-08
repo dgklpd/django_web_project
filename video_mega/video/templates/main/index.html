@@ -1,0 +1,28 @@
+{% extends "main/base.html" %}
+<head>
+  <style type="text/css">
+
+  </style>
+</head>
+{% block header %}
+  <p>-</p>
+  <div class='jumbotron'>
+    <h1>美加学子登上军运会舞台!</h1>
+  </div>
+{% endblock header %}
+<body>
+{% block content %}
+<h2>军运会宣传片《吹响集结号》发布了！</h2>
+<h3>美加分校的学子登上了世界的舞台</h3>
+<p>今天终于看到了《吹响集结号》宣传片的完整版，好激动啊。虽然距离我们拍这部宣传片的时候已经有了三个多月了，但是拍摄时的场景仿佛还历历在目。</p>
+<p>这算是美加历史以来很重要的一次活动了</p>
+<video width="800" controls="controls"　poster="/static/video_poster/poster.jpg">
+   <source src="/static/videos/v1.mp4"	type="video/mp4">
+   </source>	
+</video>
+
+
+{% endblock content %}
+</body>
+
+

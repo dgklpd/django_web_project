@@ -1,0 +1,138 @@
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>个人文章</title>
+<link rel="stylesheet" type="text/css" href="static/css/style.css" />
+<script src="static/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+<div class="bg-grey">
+	<div class="content">
+		<a href="#">
+			<h2 class="title">技术连接你我，阅读塑造人生</h2></a>
+		<p class="subtitle">IT行业领军者</p>
+		<div class="tab-block information-tab">
+			<div class="tab-buttons ">
+				<h3 class="tab-button cur" data-tab="one"></h3>
+				<h3 class="tab-button" data-tab="two">Html</h3>
+				<h3 class="tab-button" data-tab="three">Python <span class="question-icon"></span></h3>
+			</div>
+			<div class="tabs">
+				<div class="tab-item active" id="tab-one">
+					<div class="information-tab">
+
+						<div class="information-left">
+							<a href="#">
+								<img src="statics/images/1.png" width="500" height="340" alt="主程序语言:python">
+							</a>
+							<div class="left-bottom">
+								<div class="article-title">一代大神之作:python</div>
+								<div class="article-time">
+									[12-26 ]
+								</div>
+							</div>
+						</div>
+						<div class="information-right">
+							<div class="article-list current">
+								<a href="#" class="article-link">
+									<div class="article-head">
+										<span class="article-number">1</span>
+										<span class="article-title">实体店线下体验营销是新零售行业的风口</span>
+										<span class="article-time">[10-14]</span>
+									</div>
+									<div class="article-content">
+										<p>零售行业最火热的词非“新零售”莫属了，马云提出“未来，没有纯粹的电子商务，也没有纯粹的线下零售，而是线上线下与物流紧密结合的新零售时代。”的见解。因此重新定义、设计的一种思考方式的营销方法——实体店线下体验营销。</p>
+									</div>
+								</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="tab-item" id="tab-two">
+					<div class="information-tab ">
+
+						<div class="information-left">
+							<a href="#">
+								<img src="statics/images/2.png" width="500" height="340" alt="网上商城开发公司开辟社交应用的新商机">
+							</a>
+							<div class="left-bottom">
+								<div class="article-title">网上商城开发公司开辟社交应用的新商机</div>
+								<div class="article-time">
+									[02-27 ]
+								</div>
+							</div>
+						</div>
+						<div class="information-right">
+							<div class="article-list current">
+								<a href="#" class="article-link">
+									<div class="article-head ">
+										<span class="article-number">1</span>
+										<span class="article-title">如何制作一个电子商务平台系统？</span>
+										<span class="article-time">[11-07]</span>
+									</div>
+									<div class="article-content">
+										<p>大致的流程如下，以电商平台开发公司【数商云】为例子，在实际项目往往会涉及到人与人之间的复杂沟通以及协作，所以需要有严谨的管理规范以及弹性的流程控制才能达到较高水准的项目质量。</p>
+									</div>
+								</a>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="tab-item" id="tab-three">
+					<div class="information-tab ">
+
+						<div class="information-left">
+							<a href="#">
+								<img src="statics/images/3.png" width="500" height="340" alt="优秀的网上商城系统网站介绍">
+							</a>
+							<div class="left-bottom">
+								<div class="article-title">优秀的网上商城系统网站介绍</div>
+								<div class="article-time">
+									[12-04 ]
+								</div>
+							</div>
+						</div>
+						<div class="information-right">
+							<div class="article-list current">
+								<a href="#" class="article-link">
+									<div class="article-head ">
+										<span class="article-number">1</span>
+										<span class="article-title">如何制作一个电子商务平台系统？</span>
+										<span class="article-time">[11-07]</span>
+									</div>
+									<div class="article-content">
+										<p>大致的流程如下，以电商平台开发公司【数商云】为例子，在实际项目往往会涉及到人与人之间的复杂沟通以及协作，所以需要有严谨的管理规范以及弹性的流程控制才能达到较高水准的项目质量。</p>
+									</div>
+								</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	//tab切换		
+	$('.tab-button').click(function() {
+		var tab = $(this).data('tab')
+		$(this).addClass('cur').siblings('.tab-button').removeClass('cur');
+		$('#tab-' + tab + '').addClass('active').siblings('.tab-item').removeClass('active');
+	});
+	//新闻列表切换
+	$('.information-tab .article-list').hover(function() {
+		$(this).addClass('current').siblings('.article-list').removeClass('current');
+	}, function() {
+		$(this).parent('.information-right').find('.article-list:first-of-type').addClass('current').siblings('.article-list').removeClass('current');
+	});
+</script>
+
+</body>
+</html>

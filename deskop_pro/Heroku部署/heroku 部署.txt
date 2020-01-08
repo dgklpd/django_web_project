@@ -1,0 +1,32 @@
+setting.py
+#heroku server settings
+cwd = os.getcwd()
+if cwd == '/app' or cwd[:4] == '/tmp'
+    import dj_database_url
+    DATABASES = {
+        'default': dj_database_url.config(default='postgres://localhost')
+    }
+    
+    #agree to upload
+    SECURE_PROXY_SSL_HEADER =（'HTTP_X_FORWARDED_PROTO', 'https')
+    
+    #agree all host header
+    ALLOWED_HOSTS = ['*']
+    
+    #freeze DATA
+    BASE_DIR = os.path.dirname(os.path.abspath(_file_))
+    STATIC_ROOT = 'staticfiles'
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static')
+    )
+
+
+application = Cling(get_wsgi_application())
+from dj_static import cling 
+
+
+
+
+
+
+
